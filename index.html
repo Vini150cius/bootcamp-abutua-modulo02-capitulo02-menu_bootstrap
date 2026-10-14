@@ -368,16 +368,43 @@
         />
       </section>
 
-      <div class="output my-4 p-3 rounded-3" id="output"></div>
+      <!-- <div class="output my-4 p-3 rounded-3" id="output"></div> -->
 
       <button
         type="button"
         class="btn btn-primary btn-lg w-100 py-3"
         onclick="calc()"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
       >
         Calcular
       </button>
     </main>
+
+    <div
+      class="modal modal-lg fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content text-start">
+          <div class="modal-header">
+            <h2 class="modal-title fw-bold" id="exampleModalLabel">
+              Total do Pedido:
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body fs-6" id="output"></div>
+        </div>
+      </div>
+    </div>
 
     <script src="./src/jquery-3.6.0.min.js"></script>
     <script src="./src/jquery.mask.min.js"></script>
